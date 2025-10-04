@@ -778,7 +778,7 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
@@ -814,18 +814,34 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/* .hero {
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/misc/book-bg3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
+  padding: 120px 0;
+} */
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
+  background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 98%) 100% ),url(../img/misc/boo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 120px 0;
 }
 
+
+
 .hero .hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 @media (max-width: 768px) {
@@ -835,10 +851,10 @@ section,
 }
 
 .hero .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 2rem;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 .hero .hero-buttons {
