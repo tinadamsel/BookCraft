@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+
+<!-- Vendor CSS Files -->
+<link href="asset/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="asset/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+<link href="asset/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+<link href="asset/vendor/quill/quill.snow.css" rel="stylesheet" />
+<link href="asset/vendor/quill/quill.bubble.css" rel="stylesheet" />
+<link href="asset/vendor/remixicon/remixicon.css" rel="stylesheet" />
+<link href="asset/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Datatable-->
+<link href="asset/css/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/plug-ins/1.13.4/sorting/datetime-moment.js" />
+<link href="asset/vendor/simple-datatables/style.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" />
+
+<!-- Template Main CSS File -->
+<link href="asset/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+     <!-- ======= Header ======= -->
+ <header id="header" class="header fixed-top d-flex align-items-center">
+
+     <div class="d-flex align-items-center justify-content-between">
+         <a href="index.html" class="logo d-flex align-items-center">
+             <!-- <img src="asset/img/logo.png" />  -->
+             <i class="bi bi-book fs-3 px-2 text-white"></i>
+             <span class="d-none d-lg-block"> BookCraft </span>
+         </a>
+         <i class="bi bi-list toggle-sidebar-btn"></i>
+     </div><!-- End Logo -->
+
+     <div class="search-bar">
+         <form class="search-form d-flex align-items-center" method="POST" action="#">
+             <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+             <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+         </form>
+     </div><!-- End Search Bar -->
+
+     <nav class="header-nav ms-auto">
+         <ul class="d-flex align-items-center">
+
+             <li class="nav-item d-block d-lg-none">
+                 <a class="nav-link nav-icon search-bar-toggle " href="#">
+                     <i class="bi bi-search"></i>
+                 </a>
+             </li><!-- End Search Icon-->
+
+             <li class="nav-item dropdown pe-3">
+                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                     <img src="asset/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                     <span class="d-none d-md-block dropdown-toggle ps-2"> Email </span>
+                 </a><!-- End Profile Iamge Icon -->
+
+                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                     <li>
+                         <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                             <i class="bi bi-person"></i>
+                             <span>My Profile</span>
+                         </a>
+                     </li>
+                     <li>
+                         <hr class="dropdown-divider">
+                     </li>
+
+                     <li>
+                         <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                             <i class="bi bi-gear"></i>
+                             <span>Account Settings</span>
+                         </a>
+                     </li>
+                     <li>
+                         <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                         <a class="dropdown-item d-flex align-items-center">
+                             <form method="post">
+                                 <button class="btn"> <i class="bi bi-box-arrow-right"></i> <span> Logout </span></button>
+                             </form>
+                         </a>
+                     </li>
+
+                 </ul><!-- End Profile Dropdown Items -->
+             </li><!-- End Profile Nav -->
+
+         </ul>
+     </nav><!-- End Icons Navigation -->
+ </header><!-- End Header -->
+ <!-- ======= Sidebar ======= -->
+ <aside id="sidebar" class="sidebar">
+     <ul class="sidebar-nav" id="sidebar-nav">
+         <li class="nav-item">
+             <a class="nav-link active" href="dashboard.html">
+                 <i class="bi bi-house"></i>
+                 <span>Home</span>
+             </a>
+         </li><!-- End Dashboard Nav -->
+        
+        <!---
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+                <a href="components-alerts.html">
+                <i class="bi bi-circle"></i><span>Alerts</span>
+                </a>
+            </li>
+        
+            <li>
+                <a href="components-spinners.html">
+                <i class="bi bi-circle"></i><span>Spinners</span>
+                </a>
+            </li>
+            <li>
+                <a href="components-tooltips.html">
+                <i class="bi bi-circle"></i><span>Tooltips</span>
+                </a>
+            </li>
+            </ul>
+        </li> 
+        --><!-- End Components Nav -->
+        
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="newbook.html">
+            <i class="bi bi-plus"></i>
+            <span> New Books</span>
+            </a>
+        </li>
+        <li class="nav-heading text-white pt-5">Projects</li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="myCoverDesigns.html">
+            <i class="bi bi-card-list"></i>
+            <span> Cover Designs </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="allUserBooks.html">
+            <i class="bi bi-book"></i>
+            <span> My Books</span>
+            </a>
+        </li>
+                
+     </ul>
+ </aside><!-- End Sidebar-->
+    <main id="main" class="main">
+    <div class="pagetitle">
+        <h1> Welcome! </h1>
+        <!-- <h1> Welcome! <small> Admin </small> </h1> -->
+         <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="">Home</a></li>
+                <li class="breadcrumb-item active"> <small> Dashboard </small> </li>
+            </ol>
+        </nav> 
+    </div>
+    <!-- End Page Title -->
+
+    <section class="section dashboard mt-5">
+        <div class="row mx-auto">
+            <div class="pagetitle text-center">
+                    <h1> Ready To Write?</h1>
+                    <p class="text-secondary"> Let our AI help you craft the perfect book from start to finish</p>
+                </div>
+            <!-- Left side columns -->
+            <div class="col-lg-8 mx-auto">
+                <div class="row">
+                    <!-- Start Card -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="info-card sales-card">
+                            <div class="card-body">
+                                    <h5 class="card-title"> <i class="bi bi-book px-1"></i>Create new book </h5>
+                                    <p class="card-text text-white"> Start a fresh project with AI assistance</p>
+                                    <div class="align-items-center">
+                                        <div class="p-1">
+                                            <a class="btn btn-block mx-auto w-100 card-button" href="newbook.html"> 
+                                                Start writing now 
+                                            </a>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                   <!-- Start Card -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="info-card sales-card">
+                            <div class="card-body">
+                                    <h5 class="card-title"> <i class="bi bi-book px-1"></i>Design book cover </h5>
+                                    <p class="card-text text-white pt-2 pb-3"> Create stunning book covers </p>
+                                    <div class="align-items-center">
+                                        <div class="p-1">
+                                            <button class="btn btn-block mx-auto w-100 card-button"> Create a book cover </button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                </div>
+
+                <!-- Second row -->
+                <div class="row">
+                    <!-- Start Card -->
+                    <div class="col-lg-12 col-md-12">
+                        <div class="info-card sales-card">
+                            <div class="card-body">
+                                    <h5 class="card-title"> <i class="bi bi-stars px-1"></i>AI Writing Tip </h5>
+                                    <p class="card-text text-white">"Start each chapter with a compelling hook to keep readers engaged. Try askin
+                                        a question or presenting a conflict right from the first sentence" </p>
+                                    <div class="align-items-center">
+                                        <div class="d-flex justify-content-end">
+                                            <button class="btn card-button">Next <i class="bi bi-box-arrow-right px-1"></i></button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                </div>
+            </div><!-- End Left side columns -->
+
+        </div>
+    </section>
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="copyright">
+        &copy; Copyright<a href="#"> BookCraft </a>. All right reserved.
+    </div>
+</footer>
+<!-- End Footer -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+   <!-- Vendor JS Files -->
+   <script src="asset/vendor/apexcharts/apexcharts.min.js"></script>
+   <script src="asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="asset/vendor/chart.js/chart.umd.js"></script>
+   <script src="asset/vendor/echarts/echarts.min.js"></script>
+   <script src="asset/vendor/quill/quill.min.js"></script>
+   <script src="asset/vendor/tinymce/tinymce.min.js"></script>
+   <script src="asset/vendor/php-email-form/validate.js"></script>
+
+   <!-- Template Main JS File -->
+   <script src="asset/js/main.js"></script>
+ 
+   <!-- Datatable-->
+   <script src="asset/js/datatables.bootstrap4.min.js"></script>
+   <script src="asset/js/jquery.datatables.min.js"></script>
+   <script src="asset/vendor/simple-datatables/simple-datatables.js"></script>
+   <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"> </script>
+
+</body>
+</html>
