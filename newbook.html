@@ -205,16 +205,34 @@
                                             <p class="text-secondary"> Tell us about your project </p>
                                         </div>
                                         <div class="col-md-12">
-                                        <label for="inputName5" class="form-label text-white">Book Title *</label>
-                                        <input type="text" class="form-control2" id="inputName5" placeholder="Enter book name">
+                                            <label for="inputName5" class="form-label text-white">Book Title *</label>
+                                            <input type="text" class="form-control2" id="inputName5" placeholder="Enter book name">
+                                        </div>
+                                        <!-- Make the genre, target audience and writing styles select tag 
+                                         Also Remember to Add prompt the AI to add suitable images in between the pages-->
+
+                                        <div class="col-md-6">
+                                            <label for="inputEmail5" class="form-label text-white">Genre *</label>
+                                            <select class="form-control2" id=""> 
+                                                <option value="" selected> Select Genre </option>
+                                                <option value="Fiction"> Fiction </option>
+                                                <option value="Fantasy"> Fantasy </option>
+                                                <option value="Romance"> Romance </option>
+                                                <option value="Children Novels"> Children Novel </option>
+                                                <option value="Kiddies"> Kiddies </option>
+                                                
+                                            </select>
                                         </div>
                                         <div class="col-md-6">
-                                        <label for="inputEmail5" class="form-label text-white">Genre *</label>
-                                        <input type="email" class="form-control2" id="inputEmail5" placeholder="select genre">
-                                        </div>
-                                        <div class="col-md-6">
-                                        <label for="inputPassword5" class="form-label text-white">Target Audienece *</label>
-                                        <input type="password" class="form-control2" id="inputPassword5" placeholder="select audience">
+                                            <label for="inputPassword5" class="form-label text-white">Target Audience *</label>
+                                            <select class="form-control2" id=""> 
+                                                <option value="" selected> Select your Target Audience </option>
+                                                <option value="Children (5yrs - 11yrs)"> Children (5yrs - 11yrs) </option>
+                                                <option value="Teenagers (12years - 19yrs)"> Teenagers (12years - 19yrs) </option>
+                                                <option value="Adult (20yrs - 50yrs)"> Adult (20yrs - 50yrs) </option>
+                                                <option value="Elderly (Above 50yrs)"> Elderly (Above 50yrs) </option>
+                                                <option value="Professional / Academic"> Professional / Academic </option> 
+                                            </select>
                                         </div>
                                     </form>
                                    
@@ -260,12 +278,20 @@
                                         </div>
                                         
                                         <div class="col-md-6">
-                                        <label for="inputEmail5" class="form-label text-white">Book Length *</label>
-                                        <input type="email" class="form-control2" id="inputEmail5" placeholder="Enter book length">
+                                            <label for="inputEmail5" class="form-label text-white">Book Length (no of pages)*</label>
+                                            <input type="email" class="form-control2" id="inputEmail5" placeholder="Enter book length">
                                         </div>
                                         <div class="col-md-6">
-                                        <label for="inputPassword5" class="form-label text-white">Writing Style *</label>
-                                        <input type="password" class="form-control2" id="inputPassword5" placeholder="Enter writing style">
+                                            <label for="inputPassword5" class="form-label text-white">Select Writing Style *</label>
+                                            <select id="writingStyle" class="form-control2">
+                                                <option value="">Select your style</option>
+                                                <option value="Descriptive">Descriptive</option>
+                                                <option value="Narrative">Narrative</option>
+                                                <option value="Expository">Expository</option>
+                                                <option value="Persuasive">Persuasive</option>
+                                                <option value="Poetic">Poetic</option>
+                                                <option value="Minimalist">Minimalist</option>
+                                            </select>
                                         </div>
                                         <div class="col-md-6">
                                         <button class="text-white" id="uploadbtn" 
@@ -312,7 +338,7 @@
             </div>
             <!-- form column 2 end -->
 
-             <!-- form column 3 -->
+            <!-- form column 3 -->
             <div class="col-lg-10 mx-auto mt-2" id="step3" style="display: none;">
                 <div class="row">
                     <!-- Start Card -->
@@ -422,7 +448,7 @@
                                                             <div class="card-body mt-3">
                                                                      <div class="align-items-center">
                                                                         <div class="d-flex justify-content-between mt-3">
-                                                                            <h5 class="card-title" style="font-size: small;">  Chapter One: The Mentor</h5>
+                                                                            <h5 class="card-title" style="font-size: small;">  Chapter Three: The Mentor</h5>
                                                                             <span class="badge badge-light"> Completed <i class="bi bi-check-circle px-1"></i> </span>
                                                                         </div>
                                                                     </div>
@@ -482,7 +508,7 @@
                     </div>
                      <div class="align-items-center mt-4">
                         <div class="d-flex justify-content-between">
-                            <button class="btn card-button" id="prev4"><i class="bi bi-box-arrow-left px-1"> Previous</i></button>
+                            <button class="btn card-button" id="prev4"><i class="bi bi-box-arrow-left px-1"></i> Previous</button>
                             <button class="btn card-button" id="finishBtn"> Preview<i class="bi bi-box-arrow-right px-1"></i></button>
                         </div>
                     </div>
@@ -553,9 +579,7 @@
                                 </div>
                             </div>
                             <!-- End Card -->
-
-                                   
-                            
+  
                     </div>
                     <div class="col-lg-4 col-md-4 mt-0"> 
                         <div class="row g-3">
@@ -578,13 +602,13 @@
                                     
                                 </div>
                             </div>
-                            <!-- <div class="card-body mb-3">
+                            <div class="card-body mb-3">
                                 <div class="row g-3">
-                                    <h5 class="card-title mb-0"> <i class="bi bi-box-arrow-down px-1"></i> Download EPUB  </h5>
+                                    <h5 class="card-title mb-0"> <img src="asset/img/epub.png" style="width: 20px;"> Download EPUB  </h5>
                                     <p class="card-text text-secondary mt-0"> <small> E-reader compatible </small></p>
                                     
                                 </div>
-                            </div> -->
+                            </div> 
                         </div>
                          <div class="col-lg-12 col-md-12">
                             <div class="info-card sales-card">
@@ -602,7 +626,7 @@
 
                                         <div class="align-items-center">
                                             <div class="d-flex justify-content-center">
-                                                <button class="btn card-button"><i class="bi bi-stars px-1"></i> Generate Cover </button>
+                                                <a class="btn card-button" href="createbookCover.html"><i class="bi bi-stars px-1"></i> Generate Cover </a>
                                             </div>
                                         </div>
                                         <p class="text-secondary mt-3" style="font-size: smaller;">AI-powered . Professional Quality . Instant results </p>
